@@ -98,7 +98,7 @@
                  .ToArray();
 
             var modifiedProperties = monitoredProperties
-                .Where(pi => pi.GetValue(clonedEntity) != pi.GetValue(entity))
+                .Where(pi => !Equals(pi.GetValue(clonedEntity), pi.GetValue(entity)))
                 .ToArray();
 
             var isModified = modifiedProperties.Any();
