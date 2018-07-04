@@ -6,11 +6,11 @@
     {
         static void Main()
         {
-            const string connectionString = "Server=.;DataBase=MiniORM;Integrated Security=True";
+            const string connectionString = @"Server=(local)\SQLEXPRESS;DataBase=MiniORM;Integrated Security=True";
 
             var context = new SoftUniDbContext(connectionString);
 
-            var emploees = context.Employees.ToList();
+            //var emploees = context.Employees.ToList();
         }
     }
 }
